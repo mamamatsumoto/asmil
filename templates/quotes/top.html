@@ -1,0 +1,29 @@
+﻿{% extends './base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="content">
+    <div class="container-fluid">
+        <!-- Widgets -->
+        <div class="block-header">
+            <h2>MENU</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box-4 hover-expand-effect">
+                    <div class="icon">
+                        <i class="material-icons col-teal"><img src="{% static 'icons/icon_mono/quote.png' %}" class="user_added_iconsize"></i>
+                        <!--images/icons/icon_mono/quote.png -->
+                    </div>
+                    <div class="content">
+                        <div class="text">Quotations</div>
+                        <div class="number">見積書</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #END# Widgets -->
+    </div>
+</section>
+
+{% endblock content %}

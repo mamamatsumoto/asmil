@@ -1,0 +1,5 @@
+__pycache__
+ndb.sqlite3
+n.DS_Store
+nlocal_settings.py
+local_settings.py
