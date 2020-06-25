@@ -1,1 +1,1 @@
-web: gunicorn asmil.wsgi --log-file
+web: gunicorn asmil.wsgi --log-file -
