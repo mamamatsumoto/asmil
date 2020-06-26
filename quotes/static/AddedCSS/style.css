@@ -7562,7 +7562,7 @@ fieldset[disabled] .form-control {
     white-space: nowrap;
     position: relative;
     border-bottom: 1px solid #e9e9e9;
-    background: no-repeat no-repeat;
+    /* background: url("../images/user-img-background.jpg") no-repeat no-repeat; */
     height: 135px; }
     .sidebar .user-info .image {
       margin-right: 12px;
@@ -7765,7 +7765,7 @@ fieldset[disabled] .form-control {
 
 /* Login Page ================================== */
 .login-page {
-  background-color: #194d99;
+  background-color: #00BCD4;
   padding-left: 0;
   max-width: 360px;
   margin: 5% auto;
