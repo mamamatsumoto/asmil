@@ -1,0 +1,95 @@
+﻿{% extends './base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="content">
+
+    <ol class="breadcrumb breadcrumb-col-light-blue">
+        <li><a href="{% url 'quotes:top' %}">Home</a></li>
+        <li class="active">見積書一覧</li>
+    </ol>
+
+    <div class="container-fluid">
+        <!-- Widgets -->
+        <div class="block-header">
+            <h2>見積リスト</h2>
+        </div>
+            <!-- Hover Rows -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                見積書一覧
+                                <small>こんなにあります</small>
+                            </h2>
+                        </div>
+
+                        <div class="body table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>プロジェクト名</th>
+                                        <th>見積書名</th>
+                                        <th>見積書番号</th>
+                                        <th>見積書発行日</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn bg-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="caret"></span>
+                                                    <span class="sr-only"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="javascript:void(0);">編集</a></li>
+                                                    <li><a href="javascript:void(0);">印刷</a></li>
+                                                    <li><a href="javascript:void(0);">承認</a></li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li><a href="javascript:void(0);">削除</a></li>
+                                                </ul>
+                                            </div>
+                                        </th>
+                                        <td><a href="{% url 'quotes:quotedetail' %}">中城向け更新プロジェクト</a></td>
+                                        <td>高砂～那覇向け見積</td>
+                                        <td>E123456789</td>
+                                        <td>2020年6月1日</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn bg-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="caret"></span>
+                                                    <span class="sr-only"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="javascript:void(0);">編集</a></li>
+                                                    <li><a href="javascript:void(0);">印刷</a></li>
+                                                    <li><a href="javascript:void(0);">承認</a></li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li><a href="javascript:void(0);">削除</a></li>
+                                                </ul>
+                                            </div>
+                                        </th>
+                                        <td>中城向け更新プロジェクト２</td>
+                                        <td>高砂～那覇向け見積２</td>
+                                        <td>E2222222222</td>
+                                        <td>2020年7月1日</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Hover Rows -->
+        <!-- #END# Widgets -->
+    </div>
+</section>
+
+{% endblock content %}

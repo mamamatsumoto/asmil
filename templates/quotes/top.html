@@ -6,21 +6,28 @@
     <div class="container-fluid">
         <!-- Widgets -->
         <div class="block-header">
-            <h2>MENU</h2>
+            <h2>Home</h2>
         </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="info-box-4 hover-expand-effect">
-                    <div class="icon">
-                        <i class="material-icons col-teal"><img src="{% static 'icons/icon_mono/quote.png' %}" class="user_added_iconsize"></i>
-                        <!--images/icons/icon_mono/quote.png -->
+        
+        <div class="row clearfix">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card">
+                    <div class="home_frame">
+                        <div class="home_left">
+                            <img src="{% static 'icons/icon_mono/quote.png' %}" class="user_added_iconsize">
+                        </div>
+                        <div class="header home_right">
+                            <h2>
+                                見積書 <small>Quotations</small>
+                            </h2>
+                        </div>
                     </div>
-                    <div class="content">
-                        <div class="text">Quotations</div>
-                        <div class="number">見積書</div>
+                    <div class="body">
+                        <button type="button" class="btn btn-block btn-lg btn-info waves-effect home_btn_textleft" onclick="location.href='{% url 'quotes:quotelists' %}'">見積書一覧</button>
                     </div>
                 </div>
             </div>
+
         </div>
         <!-- #END# Widgets -->
     </div>

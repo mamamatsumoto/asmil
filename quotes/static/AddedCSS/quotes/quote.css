@@ -1,0 +1,370 @@
+#qd_body {
+    margin : 0;
+    background-color : gray;
+    text-align : center;
+    width : 100%;
+    font-family:ＭＳ ゴシック ;
+    font-size: 9px;
+}
+
+.qd_p {
+    margin : 0px;
+}
+
+.qd_table {
+    border-color : black;
+    border-style : solid;
+    border-collapse : collapse;
+    border-width: 1px;
+}
+
+th {
+    border-color : black;
+    border-style : solid;
+    border-collapse : collapse;
+    border-width: 1px;
+}
+
+td {
+    border-color : black;
+    border-style : solid;
+    border-collapse : collapse;
+    border-width: 1px;
+}
+
+#base {
+    margin: 100px auto 100px auto;
+    background-color: white;
+    text-align :center;
+    width : 210mm;
+    height : 297mm;
+    padding-left : 5mm;
+    padding-right : 5mm;
+    padding-top : 9mm;
+    padding-bottom : 4mm
+}
+
+/* Div title group */
+
+#title {
+    display : flex;
+}
+
+/* title left */
+#title-left {
+    width : 154.69mm;
+    text-align: left;
+}
+
+#address_position {
+    margin-left: 5.33mm;
+    margin-top: 7.62mm;
+}
+
+#title_main {
+    margin-top: 7.62mm;
+    margin-left: 63.63mm;
+    /*width: 57.37mm;*/
+    text-align: left;
+    font-size : 24px;
+}
+
+#table_address{
+    border-style : none;
+    width : 50mm;
+}
+
+.td-left-top {
+    border-style : none;
+    height : 3.81mm;
+    font-size : 14px;
+    text-decoration: underline;
+}
+
+/* title right */
+#title-rigth {
+    /* width : 53.34mm; */
+    text-align: left;
+    font-size: 11px;
+
+}
+
+#table-right-top{
+    border-style : none;
+    width : 50mm;
+}
+
+.td-right-top {
+    border-style : none;
+    height : 3.81mm;
+}
+
+.td-right-top-width {
+    width: 16mm;
+}
+
+#logo {
+    width : 48.96mm;
+    height : 12.00mm
+}
+
+
+/* grand-total */
+
+#g-total {
+    margin-top: 4mm;
+}
+
+.font-size-12px {
+    font-size: 12px;
+}
+
+#table-gtotal {
+    border-style : none;
+    width : 100%;
+}
+
+#tr-gtotal {
+    border-bottom : double; 
+    height : 8.76mm;
+}
+
+
+#td-gtotal-left {
+    border-style: none; 
+    width : 69.34mm; 
+    font-size : 18px;
+    font-weight: bold;
+    vertical-align: bottom;
+}
+
+#td-gtotal-right {
+    border-style: none; 
+    font-size : 24px;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+
+/* conditions */
+#conditions {
+    margin-top : 2.48mm;
+}
+
+.table_condition {
+    font-size: 11px;
+    width : 100%;
+}
+
+/* condition-1 */
+
+.tr_condition-1 {
+    height : 4.95mm;
+}
+
+.td_condition-1_head {
+    width : 23.70mm;
+    text-align: left;
+    padding-left: 2.67mm;
+    font-weight : bold;
+}
+
+.td_condition-1_item1 {
+    width : 74.67mm;
+    padding-left: 2.67mm;
+    text-align: left;
+}
+
+.td_condition-1_item2 {
+    /* width : 74.68mm; */
+    padding-left: 2.67mm;
+    text-align: left;
+}
+
+/* condition-2 */
+
+.qd_h2 {
+    font-size: 11px;
+    text-align: left;
+    margin: 0;
+    padding: 5px 0px;
+}
+
+.tr_condition-2 {
+    height : 4.95mm;
+}
+
+.td_condition-2_head {
+    width : 37.33mm;
+    text-align: left;
+    padding-left: 2.67mm;
+    font-weight : bold;
+}
+
+.td_condition-2_item1 {
+    width : 50.67mm;
+    padding-right: 2.67mm;
+    text-align: right;
+    border-right : none;
+}
+
+
+.td_condition-2_item1_unit {
+    width : 10.67mm;
+    text-align: left;
+    font-weight : bold;
+    border-left : none;
+}
+
+.td_condition-2_head2 {
+    width : 24.00mm;
+    text-align: left;
+    padding-left: 2.67mm;
+    font-weight : bold;
+}
+
+.td_condition-2_item2 {
+    /* width : 74.68mm; */
+    padding-right: 2.67mm;
+    text-align: right;
+    border-right: none;
+}
+
+.td_condition-2_item2_unit {
+    width : 8mm;
+    text-align: left;
+    font-weight : bold;
+    border-left : none;
+}
+
+
+/* condition-3 */
+.tr_condition-3 {
+    height : 4.95mm;
+}
+
+.td_condition-3 {
+    border-style : none;
+    text-align : left;
+    padding-left : 5.33mm;
+}
+
+
+/* div quote detail */
+#details {
+    margin-top : 2.48mm;
+}
+
+#quote_detail_list {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.dt_row_head{
+    height: 6.86mm;
+    background-color: rgb(217,217,217);
+}
+
+.dt_row_item{
+    height: 4.95mm;
+}
+
+.dt_left{
+    text-align : left;
+}
+
+.dt_center{
+    text-align : center;
+}
+
+.dt_right {
+    text-align: right;
+}
+
+.dt_col1 {
+    width : 58.67mm;
+}
+.dt_col2 {
+    width : 18.67mm;
+}
+.dt_col3 {
+    width : 16.00mm;
+}
+.dt_col4 {
+    width : 8.00mm;
+}
+.dt_col5 {
+    width : 26.67mm;
+}
+.dt_col6 {
+    width : 26.67mm;
+}
+.dt_col7 {
+    width : 18.67mm;
+}
+.dt_col8 {
+    width : 24.00mm;
+}
+.dt_col9 {
+    width : 8.00mm;
+}
+
+/* total */
+
+#total{
+    margin-top: 2.48mm;
+    padding-left: 128.02mm;
+    text-align: left;
+}
+
+#table_total {
+    width : 100%;
+    font-size : 11px;
+    font-weight : bold;
+}
+
+.tr_total {
+    height : 26px;
+}
+
+.td_total_col1 {
+    width : 40mm;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.td_total_col2 {
+    text-align: right;
+    padding-right: 5px;
+}
+
+.td_border_bottom_double {
+    border-bottom: double;
+}
+
+/* Options */
+
+#option {
+    margin-top: 3.43mm;
+    margin-left: 5.33mm;
+    text-align: left;
+    font-size: 11px;
+    text-align: left;
+    
+}
+
+#table-option {
+    border-style: none;
+    width: 100%;
+    margin-left: 2.67mm;
+}
+
+.tr_option {
+    height: 3.43mm;
+}
+
+.td_option {
+    border-style: none;
+}

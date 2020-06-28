@@ -1,0 +1,257 @@
+{% extends './base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet', href="{% static 'AddedCSS/quotes/quote.css' %}", type='text/css', media='all'>
+        <link rel="stylesheet", href="{% static 'AddedCSS/quotes/print.css' %}", type="text/css", media="print">
+    </head>
+    <boby id="qd_body">
+        <header>
+            <!-- あとで実装-->
+        </header>
+
+        <div id="base">
+            <div id="title">
+                <div id="title-left">
+                    <div id="address_position">
+                        <table id="table_address" class="qd_table">
+                            <tr><td class="td-left-top">株式会社神戸製鋼所</td></tr>
+                            <tr><td class="td-left-top">飯塚 様</td></tr>
+                        </table>
+                    </div>
+                    <div id="title_main">御　見　積　書　(概 算)</div>
+                </div>
+                <!-- ./title-left -->
+                
+                <div id="title-rigth">
+                    <div id="title-right-row1">
+                        <table id="table-right-top" class="qd_table"> 
+                            <tr>
+                                <td class="td-right-top td-right-top-width">発行日</td>
+                                <td class="td-right-top">2020年04月28日</td>
+                            </tr>
+                            <tr>
+                                <td class="td-right-top td-right-top-width">見積書No.</td>
+                                <td class="td-right-top">E2004076A-01</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- ./title-right-row1 -->
+
+                    <div id="title-right-row2">
+                        <img src="{% static 'quotes/logo.png' %}" id="logo">
+                        <table id="table-right-top" class="qd_table"> 
+                            <tr>
+                                <td class="td-right-top" colspan="2">営業本部</td>
+                            </tr>
+                            <tr>
+                                <td class="td-right-top" colspan="2">高砂物流部 国際輸送室</td>
+                            </tr>
+                            <tr>
+                                <td class="td-right-top td-right-top-width">担当者：</td>
+                                <td class="td-right-top">松本　卓也</td>
+                            </tr>
+                            <tr>
+                                <td class="td-right-top td-right-top-width">TEL：</td>
+                                <td class="td-right-top">079-443-2860</td>
+                            </tr>
+                            <tr>
+                                <td class="td-right-top td-right-top-width">FAX：</td>
+                                <td class="td-right-top">079-443-1731</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- ./title-right-row2 -->
+                </div>
+                <!-- ./title-right -->
+            </div>
+            <!-- title-->
+
+            <div id="g-total">
+                <p class="qd_p font-size-12px">下記の通り御見積申し上げますので、何卒御下命の程、お願い申し上げます。</p>
+                <table id="table-gtotal">
+                    <tr id="tr-gtotal">
+                        <td id="td-gtotal-left">御見積金額(税抜)</td>
+                        <td id="td-gtotal-right">¥201,125</td>
+                    </tr>
+               </table>
+
+            </div>
+            <!-- ./g-total-->
+
+            <div id="conditions">
+                <table class="table_condition qd_table">
+                    <tr class="tr_condition-1">
+                        <td class="td_condition-1_head">見積輸送区分</td>
+                        <td class="td_condition-1_item1">国内</td>
+                        <td class="td_condition-1_head">見積金額区分</td>
+                        <td class="td_condition-1_item2">金額</td>
+                    </tr>
+                    <tr class="tr_condition-1">
+                        <td class="td_condition-1_head">案件名</td>
+                        <td class="td_condition-1_item1">重機械部</td>
+                        <td class="td_condition-1_head">品　名</td>
+                        <td class="td_condition-1_item2">スプリッタ</td>
+                    </tr>
+                    <tr class="tr_condition-1">
+                        <td class="td_condition-1_head">積知/引受地</td>
+                        <td class="td_condition-1_item1">広島県　呉市</td>
+                        <td class="td_condition-1_head">納入地</td>
+                        <td class="td_condition-1_item2">沖縄県　沖縄市</td>
+                    </tr>
+                    <tr class="tr_condition-1">
+                        <td class="td_condition-1_head">積　港</td>
+                        <td class="td_condition-1_item1">神戸</td>
+                        <td class="td_condition-1_head">揚　港</td>
+                        <td class="td_condition-1_item2">那覇</td>
+                    </tr>
+                    <tr class="tr_condition-1">
+                        <td class="td_condition-1_head">案件実施時期</td>
+                        <td class="td_condition-1_item1">2022年06月01日～2022年06月30日</td>
+                        <td class="td_condition-1_head">見積有効期限</td>
+                        <td class="td_condition-1_item2">2022年06月30日 迄</td>
+                    </tr>
+
+                </table>
+
+                <h2 class="qd_h2">前提数量</h2>
+
+                <table class="table_condition qd_table">
+                    <tr class="tr_condition-2">
+                        <td class="td_condition-2_head">TOTAL NO. OF PACKAGE</td>
+                        <td class="td_condition-2_item1">1</td>
+                        <td class="td_condition-2_item1_unit">P'KGS</td>
+                        <td class="td_condition-2_head2">MAX LENGTH</td>
+                        <td class="td_condition-2_item2">110</td>
+                        <td class="td_condition-2_item2_unit">CM</td>
+                    </tr>
+                    <tr class="tr_condition-2">
+                        <td class="td_condition-2_head">TOTAL GROSS WEIGHT</td>
+                        <td class="td_condition-2_item1">1,300</td>
+                        <td class="td_condition-2_item1_unit">KGS</td>
+                        <td class="td_condition-2_head2">MAX WIDTH</td>
+                        <td class="td_condition-2_item2">160</td>
+                        <td class="td_condition-2_item2_unit">CM</td>
+                    </tr>
+                    <tr class="tr_condition-2">
+                        <td class="td_condition-2_head">TOTAL MEASURMENT</td>
+                        <td class="td_condition-2_item1">2.816</td>
+                        <td class="td_condition-2_item1_unit">M3</td>
+                        <td class="td_condition-2_head2">MAX HEIGHT</td>
+                        <td class="td_condition-2_item2">160</td>
+                        <td class="td_condition-2_item2_unit">CM</td>
+                    </tr>
+                    <tr class="tr_condition-2">
+                        <td class="td_condition-2_head">TOTAL FREIGHT TON</td>
+                        <td class="td_condition-2_item1">2.816</td>
+                        <td class="td_condition-2_item1_unit">F/T</td>
+                        <td class="td_condition-2_head2">MAX WEIGHT</td>
+                        <td class="td_condition-2_item2">1,300</td>
+                        <td class="td_condition-2_item2_unit">KGS</td>
+                    </tr>
+                    <tr class="tr_condition-2">
+                        <td class="td_condition-2_head">TOTAL REVENUE TON</td>
+                        <td class="td_condition-2_item1">2.485</td>
+                        <td class="td_condition-2_item1_unit">R/T</td>
+                        <td class="td_condition-2_head2">CHG WEIGHT</td>
+                        <td class="td_condition-2_item2">1,300.0</td>
+                        <td class="td_condition-2_item2_unit">KGS</td>
+                    </tr>
+
+
+                </table>
+
+                <h2 class="qd_h2">見積作業範囲</h2>
+
+                <table class="table_condition qd_table">
+                    <tr class="tr_condition-3">
+                        <td class="td_condition-3">
+                            広島県呉市貴社指定場所車上受けより梱包（バリア／透かし梱包）、神戸港迄の陸送、那覇港迄の混載輸送、那
+                        </td>
+                    </tr>
+                    <tr class="tr_condition-3">
+                        <td class="td_condition-3">
+                            覇港から沖縄県沖縄市貴社指定場所車上渡し迄。（天井クレーン荷下ろし条件）
+                        </td>
+                    </tr>
+                    <tr class="tr_condition-3">
+                        <td class="td_condition-3"></td>
+                    </tr>
+
+                </table>
+
+            </div>
+            <!-- ./conditions-->
+            <div id="details">
+                <div id="quote_detail_list">
+                    <table id="qoute_detail" class="qd_table">
+                        <tr class="dt_row_head">
+                            <th class="dt_col1 dt_center">作業名</th>
+                            <th class="dt_col2 dt_center">数量</th>
+                            <th class="dt_col3 dt_center">単位</th>
+                            <th class="dt_col4 dt_center">通貨</th>
+                            <th class="dt_col5 dt_center">単価</th>
+                            <th class="dt_col6 dt_center">金額</th>
+                            <th class="dt_col7 dt_center">Ex.Rate</th>
+                            <th class="dt_col8 dt_center">金額（￥）</th>
+                            <th class="dt_col9 dt_center">課税</th>
+                        </tr>
+                        <tr class="dt_row_item">
+                            <td class="dt_col1, dt_left">トラック賃(4t）</th>
+                            <td class="dt_col2, dt_center">1</th>
+                            <td class="dt_col3, dt_center">台</th>
+                            <td class="dt_col4, dt_center">JPY</th>
+                            <td class="dt_col5, dt_right">31,000.00</th>
+                            <td class="dt_col6, dt_right">31.000.00</th>
+                            <td class="dt_col7, dt_right"></th>
+                            <td class="dt_col8, dt_right">31,000</th>
+                            <td class="dt_col9, dt_center">〇</th>
+                        </tr>
+                    </table>
+                </div>
+                <!-- ./quote_detail_list-->
+            </div>
+            <!-- ./details-->
+
+            <div id="total">
+                <table id="table_total" class="qd_table">
+                    <tr class="tr_total">
+                        <td class="td_total_col1">免税等金額計</td>
+                        <td class="td_total_col2">0</td>
+                    </tr>
+                    <tr class="tr_total td_border_bottom_double">
+                        <td class="td_total_col1">課税金額計</td>
+                        <td class="td_total_col2">201,125</td>
+                    </tr>
+                    <tr class="tr_total">
+                        <td class="td_total_col1">合　計(税　抜)</td>
+                        <td class="td_total_col2">201,125</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- ./total-->
+
+
+            <div id="option">
+                <h2 class="qd_h2">付帯事項</h2>
+                <table id="table-option" class="qd_table">
+                    <tr class="tr_option"><td class="td_option">・本件のお見積もりは、貴社よりご提示頂きました資料を基に作成しております。</td></tr>
+                    <tr class="tr_option"><td class="td_option">　ご請求は、作業時の実際の貨物数量、サイズ、重量等により算出されるものと致します。</td></tr>
+                    <tr class="tr_option"><td class="td_option">　また、貨物数量、サイズ、重量等ならびに見積り業務範囲に変更がある場合は、再見積りとさせて頂きます。</td></tr>
+                </table>
+
+
+            </div>
+            <!-- option-->
+
+
+
+        </div>
+        <!-- ./base -->
+    </boby>
+</html>
+
+{% endblock content %}
