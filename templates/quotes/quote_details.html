@@ -23,14 +23,6 @@
                                     {{ a }}
                                 </td></tr>
                             {% endfor %}
-<!--
-                            <tr><td class="td-left-top">
-                                {{ address0 }}
-                            </td></tr>
-                            <tr><td class="td-left-top">
-                                {{ address1 }}
-                            </td></tr>
-                        -->
 
                 </table>
                     </div>
@@ -98,33 +90,33 @@
                 <table class="table_condition qd_table">
                     <tr class="tr_condition-1">
                         <td class="td_condition-1_head">見積輸送区分</td>
-                        <td class="td_condition-1_item1">国内</td>
+                        <td class="td_condition-1_item1">{{ class1 }}</td>
                         <td class="td_condition-1_head">見積金額区分</td>
-                        <td class="td_condition-1_item2">金額</td>
+                        <td class="td_condition-1_item2">{{ class2 }}</td>
                     </tr>
                     <tr class="tr_condition-1">
                         <td class="td_condition-1_head">案件名</td>
-                        <td class="td_condition-1_item1">重機械部</td>
+                        <td class="td_condition-1_item1">{{ project_name }}</td>
                         <td class="td_condition-1_head">品　名</td>
-                        <td class="td_condition-1_item2">スプリッタ</td>
+                        <td class="td_condition-1_item2">{{ item }}</td>
                     </tr>
                     <tr class="tr_condition-1">
                         <td class="td_condition-1_head">積地／引受地</td>
-                        <td class="td_condition-1_item1">広島県　呉市</td>
+                        <td class="td_condition-1_item1">{{ from }}</td>
                         <td class="td_condition-1_head">納入地</td>
-                        <td class="td_condition-1_item2">沖縄県　沖縄市</td>
+                        <td class="td_condition-1_item2">{{ to }}</td>
                     </tr>
                     <tr class="tr_condition-1">
                         <td class="td_condition-1_head">積　港</td>
-                        <td class="td_condition-1_item1">神戸</td>
+                        <td class="td_condition-1_item1">{{ POL }}</td>
                         <td class="td_condition-1_head">揚　港</td>
-                        <td class="td_condition-1_item2">那覇</td>
+                        <td class="td_condition-1_item2">{{ POD }}</td>
                     </tr>
                     <tr class="tr_condition-1">
                         <td class="td_condition-1_head">案件実施時期</td>
-                        <td class="td_condition-1_item1">2022年06月01日～2022年06月30日</td>
+                        <td class="td_condition-1_item1">{{ execute_from }} ～ {{ execute_upto }}</td>
                         <td class="td_condition-1_head">見積有効期限</td>
-                        <td class="td_condition-1_item2">2022年06月30日 迄</td>
+                        <td class="td_condition-1_item2">{{ validity }} 迄</td>
                     </tr>
 
                 </table>
@@ -134,71 +126,62 @@
                 <table class="table_condition qd_table">
                     <tr class="tr_condition-2">
                         <td class="td_condition-2_head">TOTAL NO. OF PACKAGE</td>
-                        <td class="td_condition-2_item1">1</td>
+                        <td class="td_condition-2_item1">{{ packages }}</td>
                         <td class="td_condition-2_item1_unit">P'KGS</td>
                         <td class="td_condition-2_head2">MAX LENGTH</td>
-                        <td class="td_condition-2_item2">110</td>
+                        <td class="td_condition-2_item2">{{ max_l }}</td>
                         <td class="td_condition-2_item2_unit">CM</td>
                     </tr>
                     <tr class="tr_condition-2">
                         <td class="td_condition-2_head">TOTAL GROSS WEIGHT</td>
-                        <td class="td_condition-2_item1">1,300</td>
+                        <td class="td_condition-2_item1">{{ t_gw }}</td>
                         <td class="td_condition-2_item1_unit">KGS</td>
                         <td class="td_condition-2_head2">MAX WIDTH</td>
-                        <td class="td_condition-2_item2">160</td>
+                        <td class="td_condition-2_item2">{{ max_w }}</td>
                         <td class="td_condition-2_item2_unit">CM</td>
                     </tr>
                     <tr class="tr_condition-2">
                         <td class="td_condition-2_head">TOTAL MEASURMENT</td>
-                        <td class="td_condition-2_item1">2.816</td>
+                        <td class="td_condition-2_item1">{{ t_mm }}</td>
                         <td class="td_condition-2_item1_unit">M3</td>
                         <td class="td_condition-2_head2">MAX HEIGHT</td>
-                        <td class="td_condition-2_item2">160</td>
+                        <td class="td_condition-2_item2">{{ max_h }}</td>
                         <td class="td_condition-2_item2_unit">CM</td>
                     </tr>
                     <tr class="tr_condition-2">
                         <td class="td_condition-2_head">TOTAL FREIGHT TON</td>
-                        <td class="td_condition-2_item1">2.816</td>
+                        <td class="td_condition-2_item1">{{ t_ft }}</td>
                         <td class="td_condition-2_item1_unit">F/T</td>
                         <td class="td_condition-2_head2">MAX WEIGHT</td>
-                        <td class="td_condition-2_item2">1,300</td>
+                        <td class="td_condition-2_item2">{{ max_wt }}</td>
                         <td class="td_condition-2_item2_unit">KGS</td>
                     </tr>
                     <tr class="tr_condition-2">
                         <td class="td_condition-2_head">TOTAL REVENUE TON</td>
-                        <td class="td_condition-2_item1">2.485</td>
+                        <td class="td_condition-2_item1">{{ t_rt }}</td>
                         <td class="td_condition-2_item1_unit">R/T</td>
                         <td class="td_condition-2_head2">CHG WEIGHT</td>
-                        <td class="td_condition-2_item2">1,300.0</td>
+                        <td class="td_condition-2_item2">{{ cwt }}</td>
                         <td class="td_condition-2_item2_unit">KGS</td>
                     </tr>
-
-
                 </table>
 
                 <h2 class="qd_h2">見積作業範囲</h2>
-
                 <table class="table_condition qd_table">
-                    <tr class="tr_condition-3">
-                        <td class="td_condition-3">
-                            広島県呉市貴社指定場所車上受けより梱包（バリア／透かし梱包）、神戸港迄の陸送、那覇港迄の混載輸送、那
-                        </td>
-                    </tr>
-                    <tr class="tr_condition-3">
-                        <td class="td_condition-3">
-                            覇港から沖縄県沖縄市貴社指定場所車上渡し迄。（天井クレーン荷下ろし条件）
-                        </td>
-                    </tr>
-                    <tr class="tr_condition-3">
-                        <td class="td_condition-3"></td>
-                    </tr>
-
+                    {% for b in scope %}
+                        <tr class="tr_condition-3">
+                            <td class="td_condition-3">
+                                {{ b }}
+                            </td>
+                        </tr>
+                    {% endfor %}
                 </table>
 
             </div>
             <!-- ./conditions-->
             <div id="details">
                 <div id="quote_detail_list">
+                    {% if dt_lists %}
                     <table id="qoute_detail" class="qd_table">
                         <tr class="dt_row_head">
                             <th class="dt_col1 dt_center">作業名</th>
@@ -211,18 +194,21 @@
                             <th class="dt_col8 dt_center">金額（￥）</th>
                             <th class="dt_col9 dt_center">課税</th>
                         </tr>
+                        {% for i in dt_lists %}
                         <tr class="dt_row_item">
-                            <td class="dt_col1 dt_left dt_padding_left_5">区ラック賃(4t）</th>
-                            <td class="dt_col2 dt_center">1</th>
-                            <td class="dt_col3 dt_center">台</th>
-                            <td class="dt_col4 dt_center">JPY</th>
-                            <td class="dt_col5 dt_right dt_padding_right_5">31,000.00</th>
-                            <td class="dt_col6 dt_right dt_padding_right_5">31.000.00</th>
-                            <td class="dt_col7 dt_center">1.000</th>
-                            <td class="dt_col8 dt_right dt_padding_right_5">31,000</th>
-                            <td class="dt_col9 dt_center">〇</th>
+                            <td class="dt_col1 dt_left dt_padding_left_5">{{ i.works }}</td>
+                            <td class="dt_col2 dt_center">{{ i.volume }}</td>
+                            <td class="dt_col3 dt_center">{{ i.unit_v }}</td>
+                            <td class="dt_col4 dt_center">{{ i.currency }}</td>
+                            <td class="dt_col5 dt_right dt_padding_right_5">{{ i.unit_p }}</td>
+                            <td class="dt_col6 dt_right dt_padding_right_5">{{ i.amount }}</td>
+                            <td class="dt_col7 dt_center">{{ i.ex_rate }}</td>
+                            <td class="dt_col8 dt_right dt_padding_right_5">{{ i.amount_j }}</td>
+                            <td class="dt_col9 dt_center">{{ i.tax }}</td>
                         </tr>
+                        {% endfor %}
                     </table>
+                    {% endif %}
                 </div>
                 <!-- ./quote_detail_list-->
             </div>
