@@ -18,9 +18,21 @@
                 <div id="title-left">
                     <div id="address_position">
                         <table id="table_address" class="qd_table">
-                            <tr><td class="td-left-top">株式会社神戸製鋼所</td></tr>
-                            <tr><td class="td-left-top">飯塚 様</td></tr>
-                        </table>
+                            {% for a in address %}
+                                <tr><td class="td-left-top">
+                                    {{ a }}
+                                </td></tr>
+                            {% endfor %}
+<!--
+                            <tr><td class="td-left-top">
+                                {{ address0 }}
+                            </td></tr>
+                            <tr><td class="td-left-top">
+                                {{ address1 }}
+                            </td></tr>
+                        -->
+
+                </table>
                     </div>
                     <div id="title_main">御　見　積　書　(概 算)</div>
                 </div>
@@ -31,11 +43,11 @@
                         <table id="table-right-top" class="qd_table"> 
                             <tr>
                                 <td class="td-right-top td-right-top-width">発行日</td>
-                                <td class="td-right-top">2020年04月28日</td>
+                                <td class="td-right-top">{{ issued_date }}</td>
                             </tr>
                             <tr>
                                 <td class="td-right-top td-right-top-width">見積書No.</td>
-                                <td class="td-right-top">E2004076A-01</td>
+                                <td class="td-right-top">{{ quote_no }}</td>
                             </tr>
                         </table>
                     </div>
@@ -45,22 +57,22 @@
                         <img src="{% static 'quotes/logo.png' %}" id="logo">
                         <table id="table-right-top" class="qd_table"> 
                             <tr>
-                                <td class="td-right-top" colspan="2">営業本部</td>
+                                <td class="td-right-top" colspan="2">{{ section_1 }}</td>
                             </tr>
                             <tr>
-                                <td class="td-right-top" colspan="2">高砂物流部 国際輸送室</td>
+                                <td class="td-right-top" colspan="2">{{ section_2 }}</td>
                             </tr>
                             <tr>
                                 <td class="td-right-top td-right-top-width">担当者：</td>
-                                <td class="td-right-top">松本　卓也</td>
+                                <td class="td-right-top">{{ pic }}</td>
                             </tr>
                             <tr>
                                 <td class="td-right-top td-right-top-width">TEL：</td>
-                                <td class="td-right-top">079-443-2860</td>
+                                <td class="td-right-top">{{ tel_no }}</td>
                             </tr>
                             <tr>
                                 <td class="td-right-top td-right-top-width">FAX：</td>
-                                <td class="td-right-top">079-443-1731</td>
+                                <td class="td-right-top">{{ fax_no }}</td>
                             </tr>
                         </table>
                     </div>
@@ -97,7 +109,7 @@
                         <td class="td_condition-1_item2">スプリッタ</td>
                     </tr>
                     <tr class="tr_condition-1">
-                        <td class="td_condition-1_head">積知/引受地</td>
+                        <td class="td_condition-1_head">積地／引受地</td>
                         <td class="td_condition-1_item1">広島県　呉市</td>
                         <td class="td_condition-1_head">納入地</td>
                         <td class="td_condition-1_item2">沖縄県　沖縄市</td>
@@ -200,15 +212,15 @@
                             <th class="dt_col9 dt_center">課税</th>
                         </tr>
                         <tr class="dt_row_item">
-                            <td class="dt_col1, dt_left">トラック賃(4t）</th>
-                            <td class="dt_col2, dt_center">1</th>
-                            <td class="dt_col3, dt_center">台</th>
-                            <td class="dt_col4, dt_center">JPY</th>
-                            <td class="dt_col5, dt_right">31,000.00</th>
-                            <td class="dt_col6, dt_right">31.000.00</th>
-                            <td class="dt_col7, dt_right"></th>
-                            <td class="dt_col8, dt_right">31,000</th>
-                            <td class="dt_col9, dt_center">〇</th>
+                            <td class="dt_col1 dt_left dt_padding_left_5">区ラック賃(4t）</th>
+                            <td class="dt_col2 dt_center">1</th>
+                            <td class="dt_col3 dt_center">台</th>
+                            <td class="dt_col4 dt_center">JPY</th>
+                            <td class="dt_col5 dt_right dt_padding_right_5">31,000.00</th>
+                            <td class="dt_col6 dt_right dt_padding_right_5">31.000.00</th>
+                            <td class="dt_col7 dt_center">1.000</th>
+                            <td class="dt_col8 dt_right dt_padding_right_5">31,000</th>
+                            <td class="dt_col9 dt_center">〇</th>
                         </tr>
                     </table>
                 </div>

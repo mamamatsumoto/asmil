@@ -3,6 +3,7 @@
     background-color : gray;
     text-align : center;
     width : 100%;
+    color : black;
     font-family:ＭＳ ゴシック ;
     font-size: 9px;
 }
@@ -153,7 +154,6 @@ td {
 }
 
 .table_condition {
-    font-size: 11px;
     width : 100%;
 }
 
@@ -309,6 +309,13 @@ td {
 }
 .dt_col9 {
     width : 8.00mm;
+}
+
+.dt_padding_left_5 {
+    padding-left: 5px;
+}
+.dt_padding_right_5 {
+    padding-right: 5px;
 }
 
 /* total */
