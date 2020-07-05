@@ -33,8 +33,9 @@ td {
     border-width: 1px;
 }
 
-#base {
-    margin: 100px auto 100px auto;
+.page_base {
+    margin-left : auto;
+    margin-right : auto;
     background-color: white;
     text-align :center;
     width : 210mm;
@@ -43,6 +44,20 @@ td {
     padding-right : 5mm;
     padding-top : 9mm;
     padding-bottom : 4mm
+}
+
+.page_base_1 {
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+
+.page_base_n {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.mt_248 {
+    margin-top: 2.48mm;
 }
 
 /* Div title group */
@@ -320,8 +335,7 @@ td {
 
 /* total */
 
-#total{
-    margin-top: 2.48mm;
+.total_base{
     padding-left: 128.02mm;
     text-align: left;
 }
@@ -353,8 +367,7 @@ td {
 
 /* Options */
 
-#option {
-    margin-top: 3.43mm;
+.remarks {
     margin-left: 5.33mm;
     text-align: left;
     font-size: 11px;
@@ -362,16 +375,16 @@ td {
     
 }
 
-#table-option {
+.remarks_table {
     border-style: none;
     width: 100%;
     margin-left: 2.67mm;
 }
 
-.tr_option {
+.tr_remarks {
     height: 3.43mm;
 }
 
-.td_option {
+.td_remarks {
     border-style: none;
 }
