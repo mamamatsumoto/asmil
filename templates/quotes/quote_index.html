@@ -20,6 +20,25 @@
                     <div class="card">
                         <div class="header">
                             <h2>
+                                新規見積書作成
+                                <small>{{ form.document.label }}</small>
+                            </h2>
+                        </div>
+                        <div class="body">
+                            <form action="" method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="">
+                                    {{ form.document }}
+                                </div>
+                                <br>
+                                <button type="submit" class="btn bg-light-blue waves-effect">アップロード</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="header">
+                            <h2>
                                 見積書一覧
                                 <small>こんなにあります</small>
                             </h2>

@@ -6,6 +6,7 @@ app_name = "quotes"
 
 urlpatterns = [
     path('top/', views.top, name='top'),
-    path('quotelists/', views.quotelist, name='quotelists'),
-    path('quotedetail/', views.quotedetail, name='quotedetail')
+    path('quotelists/', views.UploadView.as_view(), name='quotelists'),
+    path('quotedetail/', views.quotedetail, name='quotedetail'),
+    #path('upload/', views.UploadView.as_view(), name='upload'),
 ]

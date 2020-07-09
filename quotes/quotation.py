@@ -1,9 +1,20 @@
 import openpyxl
 import pprint
 import numpy as np
+import os.path
+import glob
 
 
-wb = openpyxl.load_workbook("quotes/E2005008B01見積書_税抜.xlsx")
+temp_dir = "media/excel/Qe6WZMYcW9"
+path = temp_dir + "/*"
+file_list = glob.glob(path)
+
+print(file_list[0])
+print(os.path.join(path, "*.xlsx"))
+
+
+
+wb = openpyxl.load_workbook("quotes/E2004076A01見積書_税抜.xlsx")
 ws = wb["template1"]
 
 
@@ -81,29 +92,38 @@ for m in quote_details:
     else:
         duty_free_total_cal.append(m[8])
 
-tax_total = sum(tax_total_cal)
+grand_total = []
+
 duty_free_total = sum(duty_free_total_cal)
+grand_total.append({"duty_free_total" : '{:,}'.format(duty_free_total)})
+
+tax_total = sum(tax_total_cal)
+grand_total.append({"tax_total" : '{:,}'.format(tax_total)})
+
 gtotal = tax_total + duty_free_total
+grand_total.append({"gtotal" : '{:,}'.format(gtotal)})
 
-grand_total = ['{:,}'.format(duty_free_total), '{:,}'.format(tax_total), '{:,}'.format(gtotal)]
+#print(grand_total)
 
-grandtotal = []
 grandtotal_1 = []
 grandtotal_2 = []
 grandtotal_3 = []
 
-for k  in grand_total:
-    grandtotal.append({
-        "duty_free_total" : k[0],
-        "tax_total" : k[1],
-        "grandtotal" : k[2],
-    })
-if quote_numbers <= dt_row_p1 - 4:
-    grandtotal_1 = grandtotal
+if quote_numbers <= dt_row_p1 - 4 or quote_numbers == dt_list_1:
+    grandtotal_1 = grand_total
 elif quote_numbers <= dt_row_p2 - 4:
-    grandtotal_2 = grandtotal
+    grandtotal_2 = grand_total
 else:
-    grandtotal_3 = grandtotal
+    grandtotal_3 = grand_total
+
+
+#print('-----------------')
+#print(len(grandtotal_1))
+#print('-----------------')
+#print(len(grandtotal_2))
+#print('-----------------')
+#print(len(grandtotal_3))
+#print('-----------------')
 
 
 # Remarks
@@ -135,13 +155,13 @@ elif len(grandtotal_2) > 0:
 else:
     remark3 = remarks
 
-print('----------------')
-print(remark1)
-print('----------------')
-print(remark2)
-print('----------------')
-#print(remark3)
-#print('----------------')
+# print('----------------')
+# print(remark1)
+# print('----------------')
+# print(remark2)
+# print('----------------')
+# print(remark3)
+# print('----------------')
 
 
 
