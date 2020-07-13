@@ -1,3 +1,7 @@
+.menu {
+    z-index: 999;
+}
+
 #qd_body {
     margin : 0;
     background-color : gray;
@@ -34,8 +38,7 @@ td {
 }
 
 .page_base {
-    margin-left : auto;
-    margin-right : auto;
+    margin : 0px auto;
     background-color: white;
     text-align :center;
     width : 210mm;
@@ -46,11 +49,6 @@ td {
     padding-bottom : 4mm
 }
 
-.page_base_1 {
-    margin-top: 100px;
-    margin-bottom: 0px;
-}
-
 .page_base_n {
     margin-top: 20px;
     margin-bottom: 100px;
@@ -59,6 +57,67 @@ td {
 .mt_248 {
     margin-top: 2.48mm;
 }
+
+.space_top {
+    height: 280px;
+}
+
+.space_bottom {
+    height: 150px;
+}
+
+.space_S {
+    height: 30px;
+}
+
+/* edit */
+.edit_base {
+    margin-top: 10px;
+    font-family: 'Roboto', Arial, Tahoma, sans-serif;
+    position: fixed;
+    width : 100%;
+    top: 70px;
+    z-index: 998;
+    text-align : center;
+    color: white;
+}
+
+.edit_card {
+    display: inline-block;
+    width : 210mm;
+    background-color: #5cc5f4;
+    opacity: 0.9;
+}
+
+#quote_edit {
+    list-style: none;
+}
+
+#quote_edit li {
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+.edit_img {
+    height : 50px;
+}
+
+.edit_close {
+    margin-left : 50px;
+}
+
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: black;
+  cursor: default;
+  background-color: #5cc5f4;
+  opacity: 0.9;
+  border: 1px solid #bee3f4;
+  border-bottom-color: transparent;
+}
+
 
 /* Div title group */
 
@@ -267,6 +326,47 @@ td {
 
 
 /* div quote detail */
+ol.qd_lists_row {
+    list-style-type: none;
+    padding: 0;
+}
+
+ol.qd_lists_col {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+
+ol.qd_lists_col li {
+    display: table-cell;
+    vertical-align: middle;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    list-style-type: none;
+}
+
+.qd_head {
+    height: 6.86mm;
+    background-color: rgb(217,217,217);
+}
+
+.qd_end {
+    border-right: 1px solid black;
+}
+
+.qd_top {
+    border-top: 1px solid black;
+}
+
+
+.qd_lists {
+    list-style-type: none;
+    padding: 0;
+}
+
+
 #details {
     margin-top : 2.48mm;
 }
@@ -274,15 +374,15 @@ td {
 #quote_detail_list {
     margin-left: auto;
     margin-right: auto;
-
 }
 
-.dt_row_head{
+.dt_row_head {
     height: 6.86mm;
+    font-weight: bold;
     background-color: rgb(217,217,217);
 }
 
-.dt_row_item{
+.dt_row_items {
     height: 4.95mm;
 }
 
@@ -299,7 +399,11 @@ td {
 }
 
 .dt_col1 {
-    width : 58.67mm;
+    width : 100%;
+}
+
+.dt_col11 {
+    width : 55.67mm;
 }
 .dt_col2 {
     width : 18.67mm;

@@ -9,11 +9,32 @@
         <link rel="stylesheet", href="{% static 'AddedCSS/quotes/print.css' %}", type="text/css", media="print">
     </head>
     <boby id="qd_body">
-        <header>
-            <!-- あとで実装-->
-        </header>
+        <div class="edit_base">
+            <div class="card edit_card">
+                <div class="header">
+                    <ul id="quote_edit">
+                        <li><img src="{% static 'icons/original/split.png' %}" class="edit_img"></li>
+                        <li><img src="{% static 'icons/original/marge.png' %}" class="edit_img"></li>
+                        <li><img src="{% static 'icons/original/trans.png' %}" class="edit_img"></li>
+                        <li><img src="{% static 'icons/original/close.png' %}" class="edit_img edit_close"></li>
+                    </ul>
+                </div>
+                <div class="body">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs nav-tabs-edit tab-col-red tab-nav-right" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" data-toggle="tab">見積比較表</a></li>
+                        <li role="presentation"><a href="#profile" data-toggle="tab">見積詳細①</a></li>
+                        <li role="presentation"><a href="#messages" data-toggle="tab">見積詳細②</a></li>
+                        <li role="presentation"><a href="#settings" data-toggle="tab">見積詳細③</a></li>
+                    </ul>
 
-        <div id="page1" class="page_base page_base_1">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="space_top"></div> <!-- ページ上部空白 -->
+        <div id="page1" class="page_base">
             <div id="title">
                 <div id="title-left">
                     <div id="address_position">
@@ -180,37 +201,40 @@
             </div>
             <!-- ./conditions-->
             <div id="details_1" class="mt_248">
-                <div id="quote_detail_list">
-                    {% if dt_list_1 %}
-                    <table id="qoute_detail" class="qd_table">
-                        <tr class="dt_row_head">
-                            <th class="dt_col1 dt_center">作業名</th>
-                            <th class="dt_col2 dt_center">数量</th>
-                            <th class="dt_col3 dt_center">単位</th>
-                            <th class="dt_col4 dt_center">通貨</th>
-                            <th class="dt_col5 dt_center">単価</th>
-                            <th class="dt_col6 dt_center">金額</th>
-                            <th class="dt_col7 dt_center">Ex.Rate</th>
-                            <th class="dt_col8 dt_center">金額（￥）</th>
-                            <th class="dt_col9 dt_center">課税</th>
-                        </tr>
-                        {% for i in dt_list_1 %}
-                        <tr class="dt_row_item">
-                            <td class="dt_col1 dt_left dt_padding_left_5">{{ i.works }}</td>
-                            <td class="dt_col2 dt_center">{{ i.volume }}</td>
-                            <td class="dt_col3 dt_center">{{ i.unit_v }}</td>
-                            <td class="dt_col4 dt_center">{{ i.currency }}</td>
-                            <td class="dt_col5 dt_right dt_padding_right_5">{{ i.unit_p }}</td>
-                            <td class="dt_col6 dt_right dt_padding_right_5">{{ i.amount }}</td>
-                            <td class="dt_col7 dt_center">{{ i.ex_rate }}</td>
-                            <td class="dt_col8 dt_right dt_padding_right_5">{{ i.amount_j }}</td>
-                            <td class="dt_col9 dt_center">{{ i.tax }}</td>
-                        </tr>
-                        {% endfor %}
-                    </table>
-                    {% endif %}
-                </div>
                 <!-- ./quote_detail_list-->
+                <div id="quote_detail_list">
+                    <ol class="qd_lists_row">
+                        <li class="qd_lists">
+                            <ol class="qd_lists_col dt_row_head">
+                                <li class="dt_col1 dt_center qd_top">作業名</li>
+                                <li class="dt_col2 dt_center qd_top">数量</li>
+                                <li class="dt_col3 dt_center qd_top">単位</li>
+                                <li class="dt_col4 dt_center qd_top">通貨</li>
+                                <li class="dt_col5 dt_center qd_top">単価</li>
+                                <li class="dt_col6 dt_center qd_top">金額</li>
+                                <li class="dt_col7 dt_center qd_top">Ex.Rate</li>
+                                <li class="dt_col8 dt_center qd_top">金額（￥）</li>
+                                <li class="dt_col9 dt_center qd_top qd_end">課税</li>
+                            </ol>
+                        </li>
+                        <li class="qd_lists">
+                            {% for i in dt_list_1 %}
+                            <ol class="qd_lists_col dt_row_items">
+                                <li class="dt_col1 dt_left dt_padding_left_5">{{ i.works }}</li>
+                                <li class="dt_col2 dt_right dt_padding_right_5">{{ i.volume }}</li>
+                                <li class="dt_col3 dt_center">{{ i.unit_v }}</li>
+                                <li class="dt_col4 dt_center">{{ i.currency }}</li>
+                                <li class="dt_col5 dt_right dt_padding_right_5">{{ i.unit_p }}</li>
+                                <li class="dt_col6 dt_right dt_padding_right_5">{{ i.amount }}</li>
+                                <li class="dt_col7 dt_center">{{ i.ex_rate }}</li>
+                                <li class="dt_col8 dt_right dt_padding_right_5">{{ i.amount_j }}</li>
+                                <li class="dt_col9 dt_center qd_end">{{ i.tax }}</li>
+                            </ol>
+                            {% endfor %}
+                        </li>
+                    </ol>
+                </div>
+                <!-- Quote test -->
             </div>
             <!-- ./details-->
 
@@ -234,7 +258,7 @@
             </div>
             <!-- ./total 1-->
 
-
+            {% if remark_1 %}
             <div id="remaks_1" class="remarks mt_248">
                 <h2 class="qd_h2">付帯事項</h2>
                 <table class="remarks_table qd_table">
@@ -243,13 +267,15 @@
                     {% endfor %}
                 </table>
             </div>
-            <!-- option-->
+            {% endif %}
+            <!-- remarks1-->
         </div>
         <!-- ./Page.1 -->
 
         <!-- Page.2 -->
         {% if page_2 %}
-        <div id="page2" class="page_base page_base_n">
+        <div class="space_S"></div>
+        <div id="page2" class="page_base">
             <div id="title">
                 <div id="title-left">
                 </div>
@@ -347,7 +373,8 @@
 
         <!-- Page.3 -->
         {% if page_3 %}
-        <div id="page2" class="page_base page_base_n">
+        <div class="space_S"></div>
+        <div id="page3" class="page_base">
             <div id="title">
                 <div id="title-left">
                 </div>
@@ -372,7 +399,7 @@
             </div>
             <!-- title-->
 
-            <!-- 見積明細2 -->
+            <!-- 見積明細3 -->
             <div id="details_3" class="mt_248">
                 <div id="quote_detail_list">
                 {% if dt_list_3 %}
@@ -405,9 +432,9 @@
                     {% endif %}
                 </div>
             </div>
-            <!-- 見積明細2 -->
+            <!-- 見積明細3 -->
 
-            <!-- total Page 2 -->
+            <!-- total Page 3 -->
             <div id="total_3" class="total_base mt_248">
                 {% if grand_total_3 %}
                 <table id="table_total" class="qd_table">
@@ -426,9 +453,9 @@
                 </table>
                 {% endif %}
             </div>
-            <!-- ./total page 2 -->
+            <!-- ./total page 3 -->
 
-            <!-- Remarks Page 2 -->
+            <!-- Remarks Page 3 -->
             {% if remark_3 %}
             <div id="remaks_2" class="remarks mt_248">
                 <h2 class="qd_h2">付帯事項</h2>
@@ -442,6 +469,7 @@
             <!-- ./Remarks Page 3 -->
         </div>
         {% endif %}
+        <div class="space_bottom"></div> <!-- ページ下部空白 -->
     </boby>
 </html>
 
